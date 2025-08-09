@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <title>博多駅 喫煙スポット</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#1f2430" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="icon" href="data:," /> <!-- とりあえずfavicon 404回避 -->
+  <link rel="apple-touch-icon" href="./icons/icon-192.png" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="appbar">
+    <h1>博多駅 喫煙スポット</h1>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <div class="row">
+        <select id="category-filter" aria-label="カテゴリ絞り込み">
+          <option value="">カテゴリ</option>
+          <option value="カフェ">カフェ</option>
+          <option value="喫茶店">喫茶店</option>
+          <option value="居酒屋">居酒屋</option>
+        </select>
+        <select id="smoking-filter" aria-label="喫煙タイプ絞り込み">
+          <option value="">喫煙タイプ</option>
+          <option value="全席喫煙可">紙OK</option>
+          <option value="分煙">分煙</option>
+          <option value="喫煙ブースあり">喫煙室</option>
+        </select>
+      </div>
+      <input id="keyword" class="search" type="search" placeholder="店名・住所で検索" aria-label="キーワード検索" />
+    </section>
+
+    <section id="status" class="status" aria-live="polite"></section>
+    <section id="store-list" class="store-list" role="list"></section>
+  </main>
+
+  <footer class="footer">© 2025 Smoking Spots Hakata</footer>
+
+  <script defer src="./app.js"></script>
+</body>
+</html>
