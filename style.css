@@ -88,3 +88,51 @@ select, .search{
   .container{ padding: 16px 16px 84px; }
   .store-card{ padding: 16px 16px 14px; }
 }
+
+/* 見出し：サイズUP＋上品なグレー */
+.appbar h1{
+  margin:0;
+  font-size: 1.6rem;           /* ← 1.1rem → 1.6rem に拡大 */
+  font-weight: 800;
+  color: #eef1f5;              /* 単色にして大人っぽく */
+  letter-spacing: .5px;
+}
+
+/* コントロール群をリッチに（ラベル付き・角丸・影） */
+.controls{ margin: 12px 0 10px; }
+.controls .row{ display:flex; gap:10px; }
+.ctrl{ display:block; flex:1; }
+.ctrl-label{
+  display:block; font-size:12px; color:#c7cbd3; margin: 0 2px 6px;
+}
+select, .search{
+  width:100%; appearance:none;
+  padding: 12px 14px; border-radius: 14px;
+  color: #eef1f5; background: #0f1420; border:1px solid #2a3140;
+  font-size: 15px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.04), 0 8px 24px rgba(0,0,0,.25);
+}
+select:focus, .search:focus{ outline:none; border-color:#44506a; box-shadow: 0 0 0 3px rgba(68,80,106,.35); }
+
+/* 検索クリアボタン */
+.search-wrap{ position: relative; }
+.clear-btn{
+  position:absolute; right:10px; top:50%; transform: translateY(-50%);
+  width:28px; height:28px; border-radius:50%;
+  border:1px solid #354056; background:#141a26; color:#cfd5e2;
+  display:flex; align-items:center; justify-content:center;
+  font-size:16px; line-height:1; cursor:pointer;
+}
+.clear-btn:hover{ background:#1a2130; }
+
+/* リンク色もオレンジからブロンズ寄りグレーへ */
+.store-card a{
+  color: #8aa2c7;              /* 渋めのブルーグレー */
+  font-weight:600; text-decoration:none;
+}
+.store-card a:hover{ text-decoration:underline }
+
+/* 喫煙ラベルは読みやすさ優先 */
+.smoking-label{
+  background:#0f1420; color:#e8ecf4; border:1px solid #2a3140;
+}
