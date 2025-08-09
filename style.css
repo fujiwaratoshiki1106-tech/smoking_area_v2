@@ -21,7 +21,7 @@ body{
 /* ===== タイトル ===== */
 .appbar{
   position: sticky; top:0; z-index:10;
-  padding: 28px 16px 14px; /* ★ 上部余白を多めに確保 */
+  padding: 40px 16px 14px; /* ★ 上部余白を多めに確保 */
   background: rgba(240,242,245,.75);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid #d8dbe2;
