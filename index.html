@@ -17,24 +17,38 @@
     <h1>博多駅 喫煙スポット</h1>
   </header>
 
-  <main class="container">
-    <section class="controls">
-      <div class="row">
-        <select id="category-filter" aria-label="カテゴリ絞り込み">
-          <option value="">カテゴリ</option>
-          <option value="カフェ">カフェ</option>
-          <option value="喫茶店">喫茶店</option>
-          <option value="居酒屋">居酒屋</option>
-        </select>
-        <select id="smoking-filter" aria-label="喫煙タイプ絞り込み">
-          <option value="">喫煙タイプ</option>
-          <option value="全席喫煙可">紙OK</option>
-          <option value="分煙">分煙</option>
-          <option value="喫煙ブースあり">喫煙室</option>
-        </select>
-      </div>
-      <input id="keyword" class="search" type="search" placeholder="店名・住所で検索" aria-label="キーワード検索" />
-    </section>
+ <section class="controls">
+  <div class="row">
+    <label class="ctrl">
+      <span class="ctrl-label">カテゴリ</span>
+      <select id="category-filter" aria-label="カテゴリ絞り込み">
+        <option value="">すべて</option>
+        <option value="カフェ">カフェ</option>
+        <option value="喫茶店">喫茶店</option>
+        <option value="居酒屋">居酒屋</option>
+      </select>
+    </label>
+
+    <label class="ctrl">
+      <span class="ctrl-label">喫煙タイプ</span>
+      <select id="smoking-filter" aria-label="喫煙タイプ絞り込み">
+        <option value="">すべて</option>
+        <option value="全席喫煙可">紙OK</option>
+        <option value="分煙">分煙</option>
+        <option value="喫煙ブースあり">喫煙室</option>
+      </select>
+    </label>
+  </div>
+
+  <label class="ctrl ctrl-search">
+    <span class="ctrl-label">店名・住所で検索</span>
+    <div class="search-wrap">
+      <input id="keyword" class="search" type="search" placeholder="例）バンカム / 博多駅南" aria-label="キーワード検索" />
+      <button id="clear-search" class="clear-btn" type="button" aria-label="検索をクリア">×</button>
+    </div>
+  </label>
+</section>
+
 
     <section id="status" class="status" aria-live="polite"></section>
     <section id="store-list" class="store-list" role="list"></section>
